@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>BROWS. Norwich — Precision Brow & Lash Studio, Chantry Place</title>
+<meta name="description" content="Precision brow threading, tinting, waxing, lamination and lash lift & tint. Walk-ins welcome at Chantry Place, Norwich.">
+
+<!--
+  DEMO BUILD NOTES (internal — not visible on page):
+  - Business: BROWS. — brow & beauty studio, Chantry Place shopping centre, Norwich (40-46 St Stephens St, NR1 3SH)
+  - Verified via chantryplace.co.uk/stores/brows/ (official centre listing, updated Mar 2026)
+  - Services confirmed: Threading, Tinting, Waxing, Brow Lamination, Lash treatments (Chantry Place listing + cached store description)
+  - Hours: Chantry Place official listing gives Tue-Sat 9am-6pm, Sun 10:30am-4:30pm, and "Today"(Mon)=9am-6pm.
+    TODO: hiring flyer (client-supplied image) states Sunday 10am-4pm — 30 min conflict with official centre listing.
+    Used the official, more recently-updated Chantry Place source as primary. Flag for Sara to confirm with client directly.
+  - Phone/email (07984 790 586 / Luke.brows@hotmail.com) sourced directly from client's own hiring ad image.
+    TODO: confirm this is the general customer contact line and not solely a recruitment contact before relying on it further.
+  - No exact in-mall unit number found (Chantry Place listing left this field blank) — directing visitors to centre map instead.
+  - No pricing published anywhere found — intentionally omitted, per no-fabrication rule.
+  - Logo colours (black/white) pulled directly from client's own supplied logo — no invented palette swap.
+-->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&display=swap');
+
+  :root{
+    --ink:#0D0D0D;
+    --paper:#FAF8F5;
+    --bone:#F0EAE1;
+    --taupe:#A9835F;
+    --taupe-dark:#6F5236;
+    --line:#D8D0C4;
+    --white:#FFFFFF;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+
+  a{color:inherit;}
+
+  img{max-width:100%; display:block;}
+
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  .eyebrow{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--taupe-dark);
+  }
+
+  .display{
+    font-family:'Archivo Black', sans-serif;
+    text-transform:uppercase;
+    line-height:0.92;
+    letter-spacing:-0.01em;
+  }
+
+  .serif-italic{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(250,248,245,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 28px;
+    max-width:1120px;
+    margin:0 auto;
+  }
+  .nav-logo{
+    display:flex;
+    align-items:center;
+    gap:2px;
+  }
+  .nav-logo .mark{
+    background:var(--ink);
+    color:var(--white);
+    font-family:'Archivo Black', sans-serif;
+    font-size:15px;
+    letter-spacing:0.02em;
+    padding:6px 10px;
+    text-transform:uppercase;
+  }
+  .nav-logo .sub{
+    font-size:10px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--taupe-dark);
+    margin-left:8px;
+    font-weight:600;
+    display:none;
+  }
+  @media(min-width:520px){ .nav-logo .sub{display:inline;} }
+
+  nav ul{
+    list-style:none;
+    display:flex;
+    gap:28px;
+  }
+  nav a{
+    font-size:13px;
+    font-weight:600;
+    text-decoration:none;
+    letter-spacing:0.02em;
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+    transition:border-color 0.2s ease;
+  }
+  nav a:hover, nav a:focus-visible{ border-color:var(--taupe); }
+  nav{display:none;}
+  @media(min-width:700px){ nav{display:block;} }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:96px 0 72px;
+  }
+  .hero .eyebrow{ display:block; margin-bottom:22px; }
+  .hero h1{
+    font-size:clamp(58px, 14vw, 148px);
+    display:inline-block;
+    background:var(--ink);
+    color:var(--white);
+    padding:0.05em 0.18em 0.1em;
+  }
+  .hero-sub{
+    font-size:clamp(19px, 3vw, 26px);
+    max-width:560px;
+    margin-top:30px;
+    color:#3A3532;
+  }
+  .hero-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px 32px;
+    margin-top:40px;
+    align-items:center;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--ink);
+    color:var(--white);
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+    letter-spacing:0.02em;
+    padding:15px 26px;
+    border:1px solid var(--ink);
+    transition:background 0.2s ease, color 0.2s ease;
+  }
+  .btn:hover, .btn:focus-visible{ background:transparent; color:var(--ink); }
+  .btn-ghost{
+    background:transparent;
+    color:var(--ink);
+    border:1px solid var(--ink);
+  }
+  .btn-ghost:hover, .btn-ghost:focus-visible{ background:var(--ink); color:var(--white); }
+
+  .walkin-note{
+    font-size:13px;
+    color:#6b6459;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .dot{
+    width:7px; height:7px; border-radius:50%;
+    background:#5f8a5a;
+    display:inline-block;
+    flex-shrink:0;
+  }
+
+  /* ---------- BLACK BAND (about) ---------- */
+  .band{
+    background:var(--ink);
+    color:var(--white);
+    padding:80px 0;
+  }
+  .band .grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:36px;
+  }
+  @media(min-width:800px){
+    .band .grid{ grid-template-columns: 0.9fr 1.1fr; gap:64px; align-items:start;}
+  }
+  .band .eyebrow{ color:var(--taupe); }
+  .band h2{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(28px, 4vw, 40px);
+    line-height:1.25;
+    margin-top:14px;
+  }
+  .band p{
+    font-size:16px;
+    line-height:1.75;
+    color:#D8D3CC;
+  }
+  .band-facts{
+    margin-top:26px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .band-fact{
+    display:flex;
+    gap:12px;
+    font-size:14px;
+    color:#D8D3CC;
+    border-top:1px solid rgba(255,255,255,0.14);
+    padding-top:10px;
+  }
+  .band-fact b{ color:var(--white); font-weight:600; min-width:120px; display:inline-block;}
+
+  /* ---------- SECTION HEADS ---------- */
+  .section{ padding:88px 0; }
+  .section-head{
+    max-width:640px;
+    margin-bottom:52px;
+  }
+  .section-head h2{
+    font-family:'Archivo Black', sans-serif;
+    text-transform:uppercase;
+    font-size:clamp(30px,5vw,44px);
+    margin-top:12px;
+    line-height:1.05;
+  }
+  .section-head p{
+    margin-top:16px;
+    font-size:16px;
+    color:#5a544c;
+    line-height:1.6;
+  }
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+  }
+  @media(min-width:640px){ .services-grid{ grid-template-columns:1fr 1fr; } }
+  @media(min-width:960px){ .services-grid{ grid-template-columns:1fr 1fr 1fr; } }
+  .service-card{
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:32px 28px;
+    transition:background 0.2s ease;
+  }
+  .service-card:hover{ background:var(--bone); }
+  .service-card .icon{
+    width:34px; height:34px;
+    margin-bottom:22px;
+    color:var(--taupe-dark);
+  }
+  .service-card h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:20px;
+    margin-bottom:10px;
+  }
+  .service-card p{
+    font-size:14px;
+    line-height:1.6;
+    color:#5a544c;
+  }
+  .service-note{
+    margin-top:26px;
+    font-size:13px;
+    color:#6b6459;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+
+  /* ---------- BROW FINDER ---------- */
+  .finder{
+    background:var(--bone);
+  }
+  .finder-shapes{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:8px;
+  }
+  @media(min-width:560px){ .finder-shapes{ grid-template-columns:repeat(5,1fr); } }
+  .shape-btn{
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:22px 10px 16px;
+    text-align:center;
+    cursor:pointer;
+    font-family:'Inter', sans-serif;
+    transition:border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+  }
+  .shape-btn:hover{ border-color:var(--taupe); transform:translateY(-2px); }
+  .shape-btn:focus-visible{ outline:2px solid var(--taupe-dark); outline-offset:2px; }
+  .shape-btn.active{ background:var(--ink); border-color:var(--ink); }
+  .shape-btn.active svg{ stroke:var(--white); }
+  .shape-btn.active span{ color:var(--white); }
+  .shape-btn svg{
+    width:44px; height:44px;
+    stroke:var(--ink);
+    fill:none;
+    stroke-width:1.6;
+    margin:0 auto 10px;
+    display:block;
+    transition:stroke 0.2s ease;
+  }
+  .shape-btn span{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink);
+  }
+
+  .finder-result{
+    margin-top:32px;
+    background:var(--ink);
+    color:var(--white);
+    padding:36px 32px;
+    display:none;
+  }
+  .finder-result.show{ display:block; animation:fadein 0.35s ease; }
+  @keyframes fadein{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+  .finder-result .r-eyebrow{
+    font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--taupe); font-weight:600;
+  }
+  .finder-result h3{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(24px,3.4vw,32px);
+    margin:10px 0 14px;
+  }
+  .finder-result p{
+    font-size:15px;
+    line-height:1.7;
+    color:#D8D3CC;
+    max-width:620px;
+  }
+  .finder-result .treat-tags{
+    display:flex; flex-wrap:wrap; gap:8px; margin-top:18px;
+  }
+  .finder-result .treat-tags span{
+    border:1px solid rgba(255,255,255,0.35);
+    padding:6px 12px;
+    font-size:12px;
+    letter-spacing:0.03em;
+  }
+  .finder-placeholder{
+    margin-top:32px;
+    padding:36px 32px;
+    border:1px dashed var(--line);
+    font-size:14px;
+    color:#8a8378;
+  }
+  .finder-placeholder.hide{ display:none; }
+
+  /* ---------- VISIT ---------- */
+  .visit-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0;
+    border:1px solid var(--line);
+  }
+  @media(min-width:800px){ .visit-grid{ grid-template-columns:1.1fr 1fr; } }
+  .visit-map iframe{
+    width:100%;
+    height:100%;
+    min-height:340px;
+    border:0;
+    filter:grayscale(0.4) contrast(1.05);
+    display:block;
+  }
+  .visit-info{
+    padding:40px 36px;
+    border-top:1px solid var(--line);
+  }
+  @media(min-width:800px){ .visit-info{ border-top:0; border-left:1px solid var(--line); } }
+  .visit-info h3{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:24px;
+    margin-bottom:18px;
+  }
+  .addr{ font-size:15px; line-height:1.6; margin-bottom:28px; }
+  .hours-table{ width:100%; border-collapse:collapse; margin-bottom:28px;}
+  .hours-table tr{ border-bottom:1px solid var(--line); }
+  .hours-table tr:last-child{ border-bottom:none; }
+  .hours-table td{ padding:9px 0; font-size:14px; }
+  .hours-table td:last-child{ text-align:right; color:#5a544c; }
+  .hours-table td.today{ font-weight:700; }
+  .contact-list{ display:flex; flex-direction:column; gap:10px; }
+  .contact-list a{
+    font-size:14px;
+    font-weight:600;
+    text-decoration:none;
+    border-bottom:1px solid var(--ink);
+    width:fit-content;
+    padding-bottom:1px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink);
+    color:#B7B0A5;
+    padding:56px 0 32px;
+  }
+  .footer-top{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:24px;
+    padding-bottom:32px;
+    border-bottom:1px solid rgba(255,255,255,0.14);
+  }
+  .footer-logo{
+    display:flex;
+    align-items:center;
+  }
+  .footer-logo .mark{
+    background:var(--white);
+    color:var(--ink);
+    font-family:'Archivo Black', sans-serif;
+    font-size:15px;
+    padding:6px 10px;
+  }
+  .footer-logo .sub{
+    font-size:10px; letter-spacing:0.22em; text-transform:uppercase;
+    color:var(--taupe); margin-left:10px; font-weight:600;
+  }
+  footer nav ul{
+    display:flex; gap:22px; list-style:none; flex-wrap:wrap;
+  }
+  footer nav a{ font-size:13px; text-decoration:none; color:#B7B0A5; }
+  footer nav a:hover{ color:var(--white); }
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    padding-top:24px;
+    font-size:12px;
+  }
+  .footer-bottom a{ color:#B7B0A5; text-decoration:none; }
+  .footer-bottom a:hover{ color:var(--white); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <span class="mark">Brows.</span>
+      <span class="sub">Norwich</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#finder">Brow Finder</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+    </nav>
+    <a href="#visit" class="btn" style="padding:10px 18px; font-size:12px;">Find Us</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Chantry Place · Norwich City Centre</span>
+    <h1 class="display">Brows.</h1>
+    <p class="hero-sub serif-italic">Precision brow &amp; lash treatments, right in the middle of your shopping trip.</p>
+    <div class="hero-meta">
+      <a href="#visit" class="btn">Find us at Chantry Place</a>
+      <span class="walkin-note"><span class="dot"></span> Walk-ins welcome — no appointment needed</span>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <span class="eyebrow">The Studio</span>
+        <h2>Clean, balanced brows — shaped around your natural features.</h2>
+      </div>
+      <div>
+        <p>Threading, tinting and lamination, done with an eye for detail and a steady hand. No lengthy booking process and no fuss — just pop in while you're at Chantry Place and the team will sort you out on the spot.</p>
+        <div class="band-facts">
+          <div class="band-fact"><b>Location</b> Chantry Place, St Stephens Street, Norwich</div>
+          <div class="band-fact"><b>Booking</b> Walk-in service, no appointment required</div>
+          <div class="band-fact"><b>Now hiring</b> Full-time Brow &amp; Lash Expert</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What We Do</span>
+      <h2>The Treatment Menu</h2>
+      <p>Every treatment starts with a quick chat about the shape you want — then it's handled there and then.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12c3-4 6-4 9 0s6 4 9 0" stroke-linecap="round"/><path d="M3 12c3 4 6 4 9 0s6-4 9 0" stroke-linecap="round" opacity="0.4"/></svg>
+        <h3>Brow Threading</h3>
+        <p>Precise, clean shaping using thread for the crispest line — the fastest way to sharpen your brow.</p>
+      </div>
+      <div class="service-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>
+        <h3>Brow Tinting</h3>
+        <p>Adds depth and definition between shapes — low-maintenance colour that holds for weeks.</p>
+      </div>
+      <div class="service-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5l14 14M19 5L5 19" stroke-linecap="round"/></svg>
+        <h3>Brow Waxing</h3>
+        <p>Fast, precise shaping for anyone who prefers wax over threading.</p>
+      </div>
+      <div class="service-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 16c2-6 4-9 8-9s6 3 8 9" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 16h16" stroke-linecap="round"/></svg>
+        <h3>Brow Lamination</h3>
+        <p>Fuller, brushed-up brows that hold their shape for weeks — great for sparse or unruly brows.</p>
+      </div>
+      <div class="service-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 13c2.5-3 5-4 8-4s5.5 1 8 4" stroke-linecap="round"/><path d="M8 9l-1-3M12 8.4V5M16 9l1-3" stroke-linecap="round"/></svg>
+        <h3>Lash Lift &amp; Tint</h3>
+        <p>Lifted, darker lashes with no extensions and no daily mascara.</p>
+      </div>
+    </div>
+
+    <p class="service-note"><span class="dot"></span> Prices available in-studio — ask the team when you pop in.</p>
+  </div>
+</section>
+
+<section class="section finder" id="finder">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Try It</span>
+      <h2>Find Your Brow Shape</h2>
+      <p>Every face is different. Tap the shape closest to yours to see what the team would typically recommend.</p>
+    </div>
+
+    <div class="finder-shapes" role="group" aria-label="Choose your face shape">
+      <button class="shape-btn" data-shape="oval">
+        <svg viewBox="0 0 48 48"><ellipse cx="24" cy="24" rx="13" ry="18"/></svg>
+        <span>Oval</span>
+      </button>
+      <button class="shape-btn" data-shape="round">
+        <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/></svg>
+        <span>Round</span>
+      </button>
+      <button class="shape-btn" data-shape="square">
+        <svg viewBox="0 0 48 48"><rect x="9" y="9" width="30" height="30" rx="4"/></svg>
+        <span>Square</span>
+      </button>
+      <button class="shape-btn" data-shape="heart">
+        <svg viewBox="0 0 48 48"><path d="M24 40 C10 28 6 18 14 12 C19 8 24 12 24 16 C24 12 29 8 34 12 C42 18 38 28 24 40 Z"/></svg>
+        <span>Heart</span>
+      </button>
+      <button class="shape-btn" data-shape="long">
+        <svg viewBox="0 0 48 48"><rect x="14" y="6" width="20" height="36" rx="10"/></svg>
+        <span>Long</span>
+      </button>
+    </div>
+
+    <div class="finder-placeholder" id="finderPlaceholder">Tap a face shape above to see your recommended brow style.</div>
+
+    <div class="finder-result" id="finderResult">
+      <span class="r-eyebrow" id="rEyebrow">Recommended for Oval</span>
+      <h3 id="rTitle">Soft Angled Brow</h3>
+      <p id="rDesc">Oval faces are naturally balanced, so the goal is simply to keep that symmetry — a soft angle through the arch adds definition without overpowering your features.</p>
+      <div class="treat-tags" id="rTags">
+        <span>Threading</span><span>Tint</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="visit">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Visit</span>
+      <h2>Find Us</h2>
+    </div>
+
+    <div class="visit-grid">
+      <div class="visit-map">
+        <iframe
+          src="https://www.google.com/maps?q=Chantry+Place,+40-46+St+Stephens+Street,+Norwich,+NR1+3SH&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Brows. at Chantry Place, Norwich">
+        </iframe>
+      </div>
+      <div class="visit-info">
+        <h3>Chantry Place</h3>
+        <p class="addr">40–46 St Stephens Street<br>Norwich, NR1 3SH<br><span class="serif-italic" style="color:#5a544c;">Walk-in service — no booking needed</span></p>
+
+        <table class="hours-table">
+          <tr><td class="today">Monday</td><td>9:00am – 6:00pm</td></tr>
+          <tr><td>Tuesday</td><td>9:00am – 6:00pm</td></tr>
+          <tr><td>Wednesday</td><td>9:00am – 6:00pm</td></tr>
+          <tr><td>Thursday</td><td>9:00am – 6:00pm</td></tr>
+          <tr><td>Friday</td><td>9:00am – 6:00pm</td></tr>
+          <tr><td>Saturday</td><td>9:00am – 6:00pm</td></tr>
+          <tr><td>Sunday</td><td>10:30am – 4:30pm</td></tr>
+        </table>
+
+        <div class="contact-list">
+          <a href="tel:+447984790586">Call or text — 07984 790 586</a>
+          <a href="https://www.facebook.com/BrowsNorwich" target="_blank" rel="noopener">Message on Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <span class="mark">Brows.</span>
+        <span class="sub">Norwich</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#finder">Brow Finder</a></li>
+          <li><a href="#visit">Visit Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>Chantry Place, 40–46 St Stephens Street, Norwich, NR1 3SH</span>
+      <a href="https://wearesparklab.com/studio" target="_blank" rel="noopener">Built by WeAreSparkLab</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const shapeData = {
+    oval: {
+      eyebrow: "Recommended for Oval",
+      title: "Soft Angled Brow",
+      desc: "Oval faces are naturally balanced, so the aim is simply to keep that symmetry. A soft angle through the arch adds a little definition without overpowering your features.",
+      tags: ["Threading", "Tint"]
+    },
+    round: {
+      eyebrow: "Recommended for Round",
+      title: "High Arch Brow",
+      desc: "A higher, more defined arch lengthens the face and adds structure — it lifts a round face rather than echoing its curves.",
+      tags: ["Threading", "Lamination"]
+    },
+    square: {
+      eyebrow: "Recommended for Square",
+      title: "Curved Soft-Arch Brow",
+      desc: "A rounder, softer curve balances a strong jawline and softens the angles of a square face.",
+      tags: ["Threading", "Tint"]
+    },
+    heart: {
+      eyebrow: "Recommended for Heart",
+      title: "Low, Flat Arch Brow",
+      desc: "Heart-shaped faces are widest at the forehead, so a flatter brow with a gentle, low arch balances a narrower chin.",
+      tags: ["Threading", "Wax"]
+    },
+    long: {
+      eyebrow: "Recommended for Long",
+      title: "Flat, Minimal-Arch Brow",
+      desc: "Keeping the brow flat with barely any arch adds width visually, which balances out extra length in the face.",
+      tags: ["Threading", "Lamination"]
+    }
+  };
+
+  const buttons = document.querySelectorAll('.shape-btn');
+  const result = document.getElementById('finderResult');
+  const placeholder = document.getElementById('finderPlaceholder');
+  const rEyebrow = document.getElementById('rEyebrow');
+  const rTitle = document.getElementById('rTitle');
+  const rDesc = document.getElementById('rDesc');
+  const rTags = document.getElementById('rTags');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const data = shapeData[btn.dataset.shape];
+      rEyebrow.textContent = data.eyebrow;
+      rTitle.textContent = data.title;
+      rDesc.textContent = data.desc;
+      rTags.innerHTML = data.tags.map(t => `<span>${t}</span>`).join('');
+
+      placeholder.classList.add('hide');
+      result.classList.add('show');
+    });
+  });
+</script>
+
+</body>
+</html>
